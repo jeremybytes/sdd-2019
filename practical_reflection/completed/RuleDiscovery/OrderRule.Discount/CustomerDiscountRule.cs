@@ -33,9 +33,7 @@ namespace OrderRule.Discount
                     if (order.OrderDiscount > 5)
                     {
                         passed = false;
-                        message = string.Format(
-                            "Maximum 5% discount for Customers with a Rating of {0}",
-                            order.Customer.Rating);
+                        message = $"Maximum 5% discount for Customers with a Rating of {order.Customer.Rating}";
                     }
                     break;
                 case 7:
@@ -43,9 +41,7 @@ namespace OrderRule.Discount
                     if (order.OrderDiscount > 10)
                     {
                         passed = false;
-                        message = string.Format(
-                            "Maximum 10% discount for Customers with a Rating of {0}",
-                            order.Customer.Rating);
+                        message = $"Maximum 10% discount for Customers with a Rating of {order.Customer.Rating}";
                     }
                     break;
                 case 9:
@@ -53,9 +49,7 @@ namespace OrderRule.Discount
                     if (order.OrderDiscount > 15)
                     {
                         passed = false;
-                        message = string.Format(
-                            "Maximum 15% discount for Customers with a Rating of {0}",
-                            order.Customer.Rating);
+                        message = $"Maximum 15% discount for Customers with a Rating of {order.Customer.Rating}";
                     }
                     break;
                 default:

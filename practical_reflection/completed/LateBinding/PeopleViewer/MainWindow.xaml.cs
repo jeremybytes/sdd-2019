@@ -5,6 +5,8 @@ namespace PeopleViewer
 {
     public partial class MainWindow : Window
     {
+        IPersonRepository repository = RepositoryFactory.GetRepository();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -13,8 +15,6 @@ namespace PeopleViewer
         private void FetchButton_Click(object sender, RoutedEventArgs e)
         {
             ClearListBox();
-
-            IPersonRepository repository = RepositoryFactory.GetRepository();
 
             var people = repository.GetPeople();
             foreach (var person in people)

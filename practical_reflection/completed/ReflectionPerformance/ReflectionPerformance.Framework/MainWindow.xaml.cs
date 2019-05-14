@@ -49,11 +49,10 @@ namespace ReflectionPerformance.Framework
 
         private void StaticMethodButton_Click(object sender, RoutedEventArgs e)
         {
+            var list = new List<int>();
+
             var elapsed = TimeThis(() =>
             {
-                var list = new List<int>();
-                var startTime = DateTimeOffset.Now;
-
                 for (int i = 0; i < iterations; i++)
                 {
                     list.Add(i);

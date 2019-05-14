@@ -20,8 +20,7 @@ namespace OrderRule.NameBadge
                     !item.ProductItem.ProductName.Contains(order.Customer.GivenName))
                 {
                     passed = false;
-                    message = string.Format("Customer Name ({0}) does not match Name Badge",
-                                            order.Customer.GivenName);
+                    message = $"Customer Name ({order.Customer.GivenName}) does not match Name Badge";
                 }
 
             return new OrderRuleResult(passed, message);
